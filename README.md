@@ -45,6 +45,18 @@ The LiDAR detector checkpoint is also required by default:
 weights/pointpillar_kitti.pth
 ```
 
+Download source:
+
+- Official OpenPCDet KITTI PointPillar model zoo entry: https://github.com/open-mmlab/OpenPCDet#kitti-3d-object-detection-baselines
+- Official PointPillar checkpoint file: https://drive.google.com/file/d/1wMxWTpU1qUoY3DsCH31WJmvJxcjFXKlm/view?usp=sharing
+- The official filename is `pointpillar_7728.pth`; this repository expects it at `weights/pointpillar_kitti.pth`.
+
+Download with the helper script:
+
+```bash
+bash scripts/download_lidar_detector_checkpoint.sh
+```
+
 or pass it explicitly:
 
 ```bash
@@ -209,6 +221,18 @@ weights/iter_25000.pth
 
 ```bash
 weights/pointpillar_kitti.pth
+```
+
+检测头权重下载地址:
+
+- OpenPCDet 官方 KITTI PointPillar Model Zoo: https://github.com/open-mmlab/OpenPCDet#kitti-3d-object-detection-baselines
+- 官方 PointPillar 权重: https://drive.google.com/file/d/1wMxWTpU1qUoY3DsCH31WJmvJxcjFXKlm/view?usp=sharing
+- 官方文件名是 `pointpillar_7728.pth`，本仓库默认读取 `weights/pointpillar_kitti.pth`。
+
+可以直接运行:
+
+```bash
+bash scripts/download_lidar_detector_checkpoint.sh
 ```
 
 ### 改端口/GPU/路线

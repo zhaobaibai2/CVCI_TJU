@@ -5,6 +5,9 @@
 - Override model path: `CKPT_PATH=/path/to/model.pth`.
 - Default LiDAR detector checkpoint path: `weights/pointpillar_kitti.pth`.
 - Override LiDAR detector checkpoint path: `CVCI_LIDAR_DETECTOR_MODEL=/path/to/pointpillar_kitti.pth`.
+- Official detector checkpoint source: OpenPCDet KITTI PointPillar `pointpillar_7728.pth`.
+- Official detector checkpoint URL: `https://drive.google.com/file/d/1wMxWTpU1qUoY3DsCH31WJmvJxcjFXKlm/view?usp=sharing`.
+- Helper download script: `scripts/download_lidar_detector_checkpoint.sh`.
 - OpenPCDet source is bundled under `third_party/OpenPCDet/`.
 - Main agent: `team_code/drivetransformer_b2d_agent.py`.
 - Main config: `adzoo/drivetransformer/configs/drivetransformer/drivetransformer_large.py`.
