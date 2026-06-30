@@ -1,0 +1,4 @@
+score_challenge_pass_threshold: 80.0
+acceptance_label_pass: ACCEPTED_80
+acceptance_label_fail: BELOW_80_KEEP_TUNING
+policy: "Default pass/acceptance is score_challenge >= 80.0. Continue tuning only below 80 or for severe regressions."

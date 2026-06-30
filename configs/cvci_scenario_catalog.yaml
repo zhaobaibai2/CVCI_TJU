@@ -1,0 +1,2333 @@
+metadata:
+  xml_source: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/data/CVCI_BenchMark.xml"
+  scenario_source: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios"
+  runtime_use: "offline_analysis_only_do_not_use_as_agent_truth"
+  num_families: 12
+scenario_families:
+  missing_car:
+    user_score_name: "missing_car"
+    scenario_class_comment: "missing car"
+    xml_scenario_types:
+      CarDisappearDiagonalAccident: 12
+    python_scenario_classes:
+      CarDisappearDiagonalAccident: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/frontcar_disappearance.py"
+    routes:
+      -
+        id: "0"
+        town: "Town06"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "200.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "1"
+        town: "Town06"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "2"
+        town: "Town06"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "3"
+        town: "Town06"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "4"
+        town: "Town06"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "5"
+        town: "Town06"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "6"
+        town: "Town06"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "7"
+        town: "Town06"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "8"
+        town: "Town06"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "9"
+        town: "Town06"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "10"
+        town: "Town06"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+      -
+        id: "11"
+        town: "Town06"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "CarDisappearAccident"
+        scenario_type: "CarDisappearDiagonalAccident"
+        trigger_point:
+          x: "210.2"
+          y: "42"
+          z: "1.0"
+          yaw: "0.0"
+    actors:
+      vehicle.nissan.patrol: 36
+      vehicle.tesla.model3: 24
+      vehicle.audi.tt: 12
+      vehicle.lincoln.mkz_2020: 12
+      vehicle.mercedes.coupe_2020: 12
+    trigger_parameters:
+      trigger_point:
+        x: "200.2"
+        y: "42"
+        z: "1.0"
+        yaw: "0.0"
+    dynamic_parameters:
+      init_speed:
+        value: "15"
+      lead_vehicle_speed:
+        value: "15"
+      reverse_speed:
+        value: "4"
+      trigger_distance:
+        value: "32.0"
+    expected_sensor_features: "front/side object detections, LiDAR corridor occupancy, route command/topology, ego speed trend"
+    main_risk_type: "scenario-specific dynamic obstacle or topology conflict"
+    recommended_rule_state_machine: "NORMAL -> APPROACH -> PREPARE -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER -> EMERGENCY"
+    route_ids:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+    towns:
+      - "Town06"
+  high_speed_temporary_construction:
+    user_score_name: "high_speed_temporary_construction"
+    scenario_class_comment: "high speed temporary construction"
+    xml_scenario_types:
+      StaticBarrier: 12
+    python_scenario_classes:
+      StaticBarrier: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/static_barrier_scenario.py"
+    routes:
+      -
+        id: "12"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "13"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "14"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "15"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "16"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "17"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "18"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "19"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "20"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "21"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "22"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "23"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "StaticBarrier"
+        scenario_type: "StaticBarrier"
+        trigger_point:
+          x: "264.43"
+          y: "173.68"
+          z: "0.0"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+    actors:
+    trigger_parameters:
+      trigger_point:
+        x: "264.43"
+        y: "173.68"
+        z: "0.0"
+        pitch: "0.0"
+        yaw: "-17.81"
+        roll: "0.0"
+    dynamic_parameters:
+      init_speed:
+        value: "60"
+      reverse_speed:
+        value: "4"
+      trigger_distance:
+        value: "40.0"
+    expected_sensor_features: "front LiDAR corridor blockage, cones/barriers/trucks, lane narrowing geometry"
+    main_risk_type: "scenario-specific dynamic obstacle or topology conflict"
+    recommended_rule_state_machine: "NORMAL -> APPROACH -> PREPARE -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER -> EMERGENCY"
+    route_ids:
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+    towns:
+      - "Town04"
+  high_speed_reckless_lane_cutting:
+    user_score_name: "high_speed_reckless_lane_cutting"
+    scenario_class_comment: "high-speed reckless lane cutting"
+    xml_scenario_types:
+      CutInCollision: 12
+    python_scenario_classes:
+      CutInCollision: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/high_speed_reckless_lane_cutting.py"
+    routes:
+      -
+        id: "24"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "CutInCollisionTown04_level1_night_rain"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "25"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "CutInCollisionTown04_level1_night_sunny"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "26"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "CutInCollisionTown04_level1_day_rain"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "27"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "CutInCollisionTown04_level1_day_sunny"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "28"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "CutInCollisionTown04_level2_night_rain"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "29"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "CutInCollisionTown04_level2_night_sunny"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "30"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "CutInCollisionTown04_level2_day_rain"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "31"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "CutInCollisionTown04_level2_day_sunny"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "32"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "CutInCollisionTown04_level3_night_rain"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "33"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "CutInCollisionTown04_level3_night_sunny"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "34"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "CutInCollisionTown04_level3_day_rain"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+      -
+        id: "35"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "CutInCollisionTown04_level3_day_sunny"
+        scenario_type: "CutInCollision"
+        trigger_point:
+          x: "-12.68"
+          y: "16.40"
+          yaw: "-179.77"
+          z: "10.64"
+    actors:
+      vehicle.lincoln.mkz_2017: 12
+      vehicle.tesla.model3: 12
+    trigger_parameters:
+      trigger_point:
+        x: "-12.68"
+        y: "16.40"
+        yaw: "-179.77"
+        z: "10.64"
+    dynamic_parameters:
+      trigger_distance:
+        value: "40.0"
+      cutin_ready_distance:
+        value: "20.0"
+      spawn_ahead_distance:
+        value: "15.0"
+      straight_speed:
+        value: "20.0"
+      cutin_initial_speed:
+        value: "10.0"
+      cutin_lane_change_speed:
+        value: "10.0"
+      distance_same_lane:
+        value: "6.0"
+      distance_other_lane:
+        value: "18.0"
+      distance_lane_change:
+        value: "20.0"
+      end_distance:
+        value: "120.0"
+      brake_trigger_distance:
+        value: "24.0"
+      response_timeout:
+        value: "5.0"
+    expected_sensor_features: "front/side object detections, LiDAR corridor occupancy, route command/topology, ego speed trend"
+    main_risk_type: "fast adjacent vehicle cut-in"
+    recommended_rule_state_machine: "NORMAL -> PREPARE -> YIELD_OR_BRAKE -> RECOVER"
+    route_ids:
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+      - "29"
+      - "30"
+      - "31"
+      - "32"
+      - "33"
+      - "34"
+      - "35"
+    towns:
+      - "Town04"
+  highway_accident_vehicle:
+    user_score_name: "highway_accident_vehicle"
+    scenario_class_comment: "highway accident vehicle"
+    xml_scenario_types:
+      HighSpeedAccident: 12
+    python_scenario_classes:
+      HighSpeedAccident: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/high_speed_accident.py"
+    routes:
+      -
+        id: "36"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "HighSpeedAccident_level1_night_rain"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "37"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "HighSpeedAccident_level1_night_sunny"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "38"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "HighSpeedAccident_level3_night_rain"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "39"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "HighSpeedAccident_level2_night_rain"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "40"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "HighSpeedAccident_level1_day_rain"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "41"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "HighSpeedAccident_level2_night_sunny"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "42"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "HighSpeedAccident_level2_day_rain"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "43"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "HighSpeedAccident_level3_night_sunny"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "44"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "HighSpeedAccident_level2_day_sunny"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "45"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "HighSpeedAccident_level3_day_rain"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "46"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "HighSpeedAccident_level3_day_sunny"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+      -
+        id: "47"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "HighSpeedAccident_level1_day_sunny"
+        scenario_type: "HighSpeedAccident"
+        trigger_point:
+          x: "191.11"
+          y: "197.18"
+          z: "0.5"
+          yaw: "-17.81"
+    actors:
+    trigger_parameters:
+      trigger_point:
+        x: "191.11"
+        y: "197.18"
+        z: "0.5"
+        yaw: "-17.81"
+    dynamic_parameters:
+      init_speed:
+        value: "16.7"
+      lateral_distance:
+        value: "5.40"
+    expected_sensor_features: "front/side object detections, LiDAR corridor occupancy, route command/topology, ego speed trend"
+    main_risk_type: "highway stopped/accident vehicle ahead"
+    recommended_rule_state_machine: "APPROACH -> PREPARE -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER"
+    route_ids:
+      - "36"
+      - "37"
+      - "38"
+      - "39"
+      - "40"
+      - "41"
+      - "42"
+      - "43"
+      - "44"
+      - "45"
+      - "46"
+      - "47"
+    towns:
+      - "Town04"
+  trucks_encountered_during_construction:
+    user_score_name: "trucks_encountered_during_construction"
+    scenario_class_comment: "trucks encountered during construction"
+    xml_scenario_types:
+      LaneClosureWithTruck: 12
+    python_scenario_classes:
+      LaneClosureWithTruck: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/lane_closure_with_truck.py"
+    routes:
+      -
+        id: "48"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "49"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "50"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "51"
+        town: "Town04"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "52"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "53"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "54"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "55"
+        town: "Town04"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "56"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "57"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "58"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+      -
+        id: "59"
+        town: "Town04"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "LaneClosureWithTruck_level1_night_rain"
+        scenario_type: "LaneClosureWithTruck"
+        trigger_point:
+          x: "127.23"
+          y: "222.25"
+          z: "0.5"
+          pitch: "0.0"
+          yaw: "-17.81"
+          roll: "0.0"
+    actors:
+      other_actors: 12
+    trigger_parameters:
+      trigger_point:
+        x: "127.23"
+        y: "222.25"
+        z: "0.5"
+        pitch: "0.0"
+        yaw: "-17.81"
+        roll: "0.0"
+    dynamic_parameters:
+      init_speed:
+        value: "70.0"
+      truck_distance:
+        value: "55.0"
+      truck_lateral_offset:
+        value: "0.5"
+      cone_start_distance:
+        value: "30.0"
+      cone_end_distance:
+        value: "45.0"
+      cone_start_offset:
+        value: "-7.0"
+      cone_end_offset:
+        value: "-3.3"
+    expected_sensor_features: "front LiDAR corridor blockage, cones/barriers/trucks, lane narrowing geometry"
+    main_risk_type: "static/dynamic construction blockage"
+    recommended_rule_state_machine: "APPROACH -> PREPARE -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER"
+    route_ids:
+      - "48"
+      - "49"
+      - "50"
+      - "51"
+      - "52"
+      - "53"
+      - "54"
+      - "55"
+      - "56"
+      - "57"
+      - "58"
+      - "59"
+    towns:
+      - "Town04"
+  roundabout:
+    user_score_name: "roundabout"
+    scenario_class_comment: "drive into the roundabout"
+    xml_scenario_types:
+      RoundaboutMergeConflict: 12
+    python_scenario_classes:
+      RoundaboutMergeConflict: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/drive_into_roundabout.py"
+    routes:
+      -
+        id: "60"
+        town: "Town03"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "61"
+        town: "Town03"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "62"
+        town: "Town03"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "63"
+        town: "Town03"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "64"
+        town: "Town03"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "65"
+        town: "Town03"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "66"
+        town: "Town03"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "67"
+        town: "Town03"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "68"
+        town: "Town03"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "69"
+        town: "Town03"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "70"
+        town: "Town03"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+      -
+        id: "71"
+        town: "Town03"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "RoundaboutMergeConflict_1"
+        scenario_type: "RoundaboutMergeConflict"
+        trigger_point:
+          x: "4.84"
+          y: "43"
+          z: "0.0"
+          yaw: "270.0"
+    actors:
+      vehicle.lincoln.mkz_2017: 12
+    trigger_parameters:
+      trigger_point:
+        x: "4.84"
+        y: "43"
+        z: "0.0"
+        yaw: "270.0"
+    dynamic_parameters:
+      init_speed:
+        value: "8.33"
+      distance:
+        value: "5"
+      adversary_speed:
+        value: "6.0"
+      adversary_intitial_speed:
+        value: "1"
+      adversary_waypoints: null
+    expected_sensor_features: "route curvature, junction topology, side vehicle detections, low-speed merge gap"
+    main_risk_type: "roundabout entering/yield topology"
+    recommended_rule_state_machine: "APPROACH -> PREPARE -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER"
+    route_ids:
+      - "60"
+      - "61"
+      - "62"
+      - "63"
+      - "64"
+      - "65"
+      - "66"
+      - "67"
+      - "68"
+      - "69"
+      - "70"
+      - "71"
+    towns:
+      - "Town03"
+  four_students_crossing_the_road:
+    user_score_name: "four_students_crossing_the_road"
+    scenario_class_comment: "four students crossing the road"
+    xml_scenario_types:
+      GhostProbeScenario: 12
+    python_scenario_classes:
+      GhostProbeScenario: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/ghost_probe.py"
+    routes:
+      -
+        id: "72"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "GhostProbe_level1_night_rain"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "73"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "GhostProbe_level2_night_rain"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "74"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "GhostProbe_level3_night_rain"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "75"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "GhostProbe_level1_night_sunny"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "76"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "GhostProbe_level2_night_sunny"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "77"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "GhostProbe_level3_night_sunny"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "78"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "GhostProbe_level1_day_rain"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "79"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "GhostProbe_level2_day_rain"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "80"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "GhostProbe_level3_day_rain"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "81"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "GhostProbe_level1_day_sunny"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "82"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "GhostProbe_level2_day_sunny"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+      -
+        id: "83"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "GhostProbe_level3_day_sunny"
+        scenario_type: "GhostProbeScenario"
+        trigger_point:
+          x: "-35.0"
+          y: "2.7"
+          z: "1.5"
+          yaw: "0.0"
+    actors:
+    trigger_parameters:
+      trigger_point:
+        x: "-35.0"
+        y: "2.7"
+        z: "1.5"
+        yaw: "0.0"
+    dynamic_parameters:
+      init_speed:
+        value: "9.72"
+      trigger_distance:
+        value: "20.0"
+    expected_sensor_features: "front/side camera pedestrian detections, LiDAR small moving clusters, decreasing TTC"
+    main_risk_type: "pedestrians crossing from road edge"
+    recommended_rule_state_machine: "APPROACH -> YIELD_OR_BRAKE -> RECOVER"
+    route_ids:
+      - "72"
+      - "73"
+      - "74"
+      - "75"
+      - "76"
+      - "77"
+      - "78"
+      - "79"
+      - "80"
+      - "81"
+      - "82"
+      - "83"
+    towns:
+      - "Town05"
+  avoid_a_disabled_vehicle:
+    user_score_name: "avoid_a_disabled_vehicle"
+    scenario_class_comment: "avoid a disabled vehicle"
+    xml_scenario_types:
+      BrokenDownVehicle: 12
+    python_scenario_classes:
+      BrokenDownVehicle: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/broken_down_vehicle.py"
+    routes:
+      -
+        id: "84"
+        town: "Town06"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "BrokenDownVehicle_S40_NR"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "85"
+        town: "Town06"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "BrokenDownVehicle_S40_NS"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "86"
+        town: "Town06"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "BrokenDownVehicle_S40_DR"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "87"
+        town: "Town06"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "BrokenDownVehicle_S40_DS"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "88"
+        town: "Town06"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "BrokenDownVehicle_S30_NR"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "89"
+        town: "Town06"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "BrokenDownVehicle_S30_NS"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "90"
+        town: "Town06"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "BrokenDownVehicle_S30_DR"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "91"
+        town: "Town06"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "BrokenDownVehicle_S30_DS"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "92"
+        town: "Town06"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "BrokenDownVehicle_S20_NR"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "93"
+        town: "Town06"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "BrokenDownVehicle_S20_NS"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "94"
+        town: "Town06"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "BrokenDownVehicle_S20_DR"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+      -
+        id: "95"
+        town: "Town06"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "BrokenDownVehicle_S20_DS"
+        scenario_type: "BrokenDownVehicle"
+        trigger_point:
+          x: "-62.7"
+          y: "-12.0"
+          z: "0.5"
+          yaw: "-180.0"
+    actors:
+      vehicle.tesla.model3: 12
+      vehicle.audi.tt: 12
+      vehicle.bmw.grandtourer: 12
+      static.prop.constructioncone: 12
+      vehicle.volkswagen.t2: 12
+    trigger_parameters:
+      trigger_point:
+        x: "-62.7"
+        y: "-12.0"
+        z: "0.5"
+        yaw: "-180.0"
+    dynamic_parameters:
+      init_speed:
+        value: "40.0"
+    expected_sensor_features: "front/side object detections, LiDAR corridor occupancy, route command/topology, ego speed trend"
+    main_risk_type: "scenario-specific dynamic obstacle or topology conflict"
+    recommended_rule_state_machine: "NORMAL -> APPROACH -> PREPARE -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER -> EMERGENCY"
+    route_ids:
+      - "84"
+      - "85"
+      - "86"
+      - "87"
+      - "88"
+      - "89"
+      - "90"
+      - "91"
+      - "92"
+      - "93"
+      - "94"
+      - "95"
+    towns:
+      - "Town06"
+  slanted_motor_and_children:
+    user_score_name: "slanted_motor_and_children"
+    scenario_class_comment: "slanted motor and children"
+    xml_scenario_types:
+      EbikeAndPedestrianCross: 12
+    python_scenario_classes:
+      EbikeAndPedestrianCross: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/slanario_motor_children.py"
+    routes:
+      -
+        id: "96"
+        town: "Town10HD_Opt"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-25.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "97"
+        town: "Town10HD_Opt"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-25.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "98"
+        town: "Town10HD_Opt"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-25.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "99"
+        town: "Town10HD_Opt"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-25.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "100"
+        town: "Town10HD_Opt"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-15.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "101"
+        town: "Town10HD_Opt"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-15.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "102"
+        town: "Town10HD_Opt"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-15.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "103"
+        town: "Town10HD_Opt"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-15.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "104"
+        town: "Town10HD_Opt"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-5.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "105"
+        town: "Town10HD_Opt"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-5.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "106"
+        town: "Town10HD_Opt"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-5.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+      -
+        id: "107"
+        town: "Town10HD_Opt"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "EbikeAndPedestrianCross"
+        scenario_type: "EbikeAndPedestrianCross"
+        trigger_point:
+          x: "-5.0"
+          y: "-65.01"
+          z: "0.5"
+          yaw: "180.0"
+    actors:
+      vehicle.bh.crossbike: 12
+      walker.pedestrian.0010: 12
+    trigger_parameters:
+      trigger_point:
+        x: "-25.0"
+        y: "-65.01"
+        z: "0.5"
+        yaw: "180.0"
+    dynamic_parameters:
+      init_speed:
+        value: "20.0"
+      difficulty:
+        value: "level1"
+    expected_sensor_features: "front/side camera pedestrian detections, LiDAR small moving clusters, decreasing TTC"
+    main_risk_type: "scenario-specific dynamic obstacle or topology conflict"
+    recommended_rule_state_machine: "NORMAL -> APPROACH -> PREPARE -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER -> EMERGENCY"
+    route_ids:
+      - "96"
+      - "97"
+      - "98"
+      - "99"
+      - "100"
+      - "101"
+      - "102"
+      - "103"
+      - "104"
+      - "105"
+      - "106"
+      - "107"
+    towns:
+      - "Town10HD_Opt"
+  reverse_vehicle:
+    user_score_name: "reverse_vehicle"
+    scenario_class_comment: "reverse vehicle"
+    xml_scenario_types:
+      ReverseVehicle: 12
+    python_scenario_classes:
+      ReverseVehicle: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/reverse_vehicle.py"
+    routes:
+      -
+        id: "108"
+        town: "Town03"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "109"
+        town: "Town03"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "110"
+        town: "Town03"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "111"
+        town: "Town03"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "112"
+        town: "Town03"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "113"
+        town: "Town03"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "114"
+        town: "Town03"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "115"
+        town: "Town03"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "116"
+        town: "Town03"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "117"
+        town: "Town03"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "118"
+        town: "Town03"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "119"
+        town: "Town03"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "CrossTrafficInteraction_Town05_1"
+        scenario_type: "ReverseVehicle"
+        trigger_point:
+          x: "25.00000"
+          y: "134.423233"
+          z: "0.5"
+          yaw: "0.0"
+    actors:
+      vehicle.tesla.model3: 24
+      vehicle.bh.crossbike: 12
+    trigger_parameters:
+      trigger_point:
+        x: "25.00000"
+        y: "134.423233"
+        z: "0.5"
+        yaw: "0.0"
+    dynamic_parameters:
+      init_speed:
+        value: "19.4"
+      reverse_speed:
+        value: "4"
+      trigger_distance:
+        value: "40.0"
+    expected_sensor_features: "front/side object detections, LiDAR corridor occupancy, route command/topology, ego speed trend"
+    main_risk_type: "oncoming or reversing vehicle intrudes into ego lane"
+    recommended_rule_state_machine: "APPROACH -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER"
+    route_ids:
+      - "108"
+      - "109"
+      - "110"
+      - "111"
+      - "112"
+      - "113"
+      - "114"
+      - "115"
+      - "116"
+      - "117"
+      - "118"
+      - "119"
+    towns:
+      - "Town03"
+  crazy_motor:
+    user_score_name: "crazy_motor"
+    scenario_class_comment: "crazy motor"
+    xml_scenario_types:
+      CrazyBikeScenario: 12
+    python_scenario_classes:
+      CrazyBikeScenario: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/crazy_bike.py"
+    routes:
+      -
+        id: "120"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "CrazyBike_level1_night_rain"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "121"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "CrazyBike_level1_night_sunny"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "122"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "CrazyBike_level1_day_rain"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "123"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "CrazyBike_level1_day_sunny"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "124"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "CrazyBike_level2_night_rain"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "125"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "CrazyBike_level2_night_sunny"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "126"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "CrazyBike_level2_day_rain"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "127"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "CrazyBike_level2_day_sunny"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "128"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "CrazyBike_level3_night_rain"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "129"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "CrazyBike_level3_night_sunny"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "130"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "CrazyBike_level3_day_rain"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+      -
+        id: "131"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "CrazyBike_level3_day_sunny"
+        scenario_type: "CrazyBikeScenario"
+        trigger_point:
+          x: "56.0"
+          y: "1.8"
+          z: "0.5"
+          yaw: "0.0"
+    actors:
+      vehicle.vespa.zx125: 12
+    trigger_parameters:
+      trigger_point:
+        x: "56.0"
+        y: "1.8"
+        z: "0.5"
+        yaw: "0.0"
+    dynamic_parameters:
+      init_speed:
+        value: "6.9"
+      bike_speed_limit:
+        value: "5.5"
+      bike_speed:
+        value: "3.8"
+      bike_cross_speed:
+        value: "4.6"
+      cut_in_trigger_distance:
+        value: "24.0"
+      lane_change_direction:
+        value: "left"
+      distance_same_lane:
+        value: "3.0"
+      distance_other_lane:
+        value: "20.0"
+      post_change_distance:
+        value: "25.0"
+      ego_log_interval:
+        value: "0.2"
+      decel_trigger_distance:
+        value: "24.0"
+      decel_latest_reaction_distance:
+        value: "10.0"
+      decel_min_speed_drop:
+        value: "2.0"
+      resume_escape_distance:
+        value: "12.0"
+      resume_speed:
+        value: "5.0"
+      resume_min_duration:
+        value: "1.0"
+      resume_lane_tolerance:
+        value: "1.8"
+    expected_sensor_features: "front/side object detections, LiDAR corridor occupancy, route command/topology, ego speed trend"
+    main_risk_type: "scenario-specific dynamic obstacle or topology conflict"
+    recommended_rule_state_machine: "NORMAL -> APPROACH -> PREPARE -> YIELD_OR_BRAKE -> AVOID_OR_PASS -> RECOVER -> EMERGENCY"
+    route_ids:
+      - "120"
+      - "121"
+      - "122"
+      - "123"
+      - "124"
+      - "125"
+      - "126"
+      - "127"
+      - "128"
+      - "129"
+      - "130"
+      - "131"
+    towns:
+      - "Town05"
+  blind_spot_hidden_car:
+    user_score_name: "blind_spot_hidden_car"
+    scenario_class_comment: "blind spot hidden car"
+    xml_scenario_types:
+      IntersectionCollisionLeftTurn: 12
+    python_scenario_classes:
+      IntersectionCollisionLeftTurn: "/root/autodl-tmp/projects/CVCI_Benchmark/CVCI_BenchMark/scenario_runner/srunner/scenarios/IntersectionCollisionLeftTurn.py"
+    routes:
+      -
+        id: "132"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_0"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "133"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_1"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "134"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_2"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "135"
+        town: "Town05"
+        difficulty_level: 1
+        weather: "weather_3"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "136"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_0"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "137"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_1"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "138"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_2"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "139"
+        town: "Town05"
+        difficulty_level: 2
+        weather: "weather_3"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "140"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_0"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "141"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_1"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "142"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_2"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+      -
+        id: "143"
+        town: "Town05"
+        difficulty_level: 3
+        weather: "weather_3"
+        scenario_name: "IntersectionCollisionLeftTurn_1"
+        scenario_type: "IntersectionCollisionLeftTurn"
+        trigger_point:
+          x: "-45.0"
+          y: "205.1"
+          z: "3.5"
+          yaw: "0.0"
+    actors:
+      vehicle.audi.tt: 12
+    trigger_parameters:
+      trigger_point:
+        x: "-45.0"
+        y: "205.1"
+        z: "3.5"
+        yaw: "0.0"
+    dynamic_parameters:
+      init_speed:
+        value: "10.0"
+      npc_speed:
+        value: "8.0"
+    expected_sensor_features: "front/side object detections, LiDAR corridor occupancy, route command/topology, ego speed trend"
+    main_risk_type: "occluded crossing or hidden vehicle"
+    recommended_rule_state_machine: "APPROACH -> PREPARE -> YIELD_OR_BRAKE -> RECOVER"
+    route_ids:
+      - "132"
+      - "133"
+      - "134"
+      - "135"
+      - "136"
+      - "137"
+      - "138"
+      - "139"
+      - "140"
+      - "141"
+      - "142"
+      - "143"
+    towns:
+      - "Town05"
