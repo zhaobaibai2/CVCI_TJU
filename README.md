@@ -3,6 +3,82 @@
 Code-only release for the TJU CVCI 2026 Bench2InterActDrive closed-loop submission. This repository contains the DriveTransformer-based agent, CVCI rule supervisor, auxiliary LiDAR/perception modules, route tools, and runnable shell entry points. Model weights and benchmark assets are intentionally not included.
 
 本仓库是 TJU CVCI 2026 Bench2InterActDrive 闭环提交代码版，只包含可复现代码、规则、辅助感知、工具脚本和运行入口，不包含模型权重、CARLA、CVCI 官方 benchmark 数据或历史结果。
+CVCI 模型权重需要从百度网盘下载，LiDAR 检测头权重按下面说明下载即可。
+
+模型权重下载地址:
+
+- Baidu Netdisk: https://pan.baidu.com/s/1PBYbQAnsth5cPI6PMR4ESw?pwd=mee9
+- 提取码: `mee9`
+- 下载后放到 `weights/iter_25000.pth`，或通过 `CKPT_PATH` 指向实际路径。
+
+
+## Chinese Usage Notes
+
+### 目录用途
+
+- `team_code/`: 官方评测会加载的 agent 和我们新增的 CVCI 规则/辅助感知代码。
+- `team_code/auxiliary_perception/`: LiDAR 点云几何、必需检测头、目标跟踪。
+- `third_party/OpenPCDet/`: 已放入仓库的检测头源码，不含检测头权重。
+- `tools/`: 路线拆分、队列运行、分数统计、场景分析工具。
+- `scripts/`: 推荐使用的运行入口，所有路径都可以通过环境变量覆盖。
+- `weights/`: 模型占位目录，只放你自己通过其他方式上传的权重，不提交到 git。
+- `outputs/`: 运行输出目录，不提交到 git。
+
+### 单次闭环运行
+
+```bash
+cd CVCI_TJU
+export CVCI_ROOT=/你的/CVCI_Benchmark/CVCI_BenchMark
+export CARLA_ROOT=/你的/carla
+export CKPT_PATH=/你的/iter_25000.pth
+export CVCI_LIDAR_DETECTOR_MODEL=/你的/pointpillar_kitti.pth
+export PYTHON_BIN=/你的/python
+bash scripts/run_cvci_closed_loop.sh
+```
+
+如果权重放在仓库默认位置，可以不设置 `CKPT_PATH`:
+
+```bash
+weights/iter_25000.pth
+```
+
+CVCI 模型权重下载地址:
+
+- Baidu Netdisk: https://pan.baidu.com/s/1PBYbQAnsth5cPI6PMR4ESw?pwd=mee9
+- 提取码: `mee9`
+
+检测头权重默认位置:
+
+```bash
+weights/pointpillar_kitti.pth
+```
+
+检测头权重下载地址:
+
+- OpenPCDet 官方 KITTI PointPillar Model Zoo: https://github.com/open-mmlab/OpenPCDet#kitti-3d-object-detection-baselines
+- 官方 PointPillar 权重: https://drive.google.com/file/d/1wMxWTpU1qUoY3DsCH31WJmvJxcjFXKlm/view?usp=sharing
+- 官方文件名是 `pointpillar_7728.pth`，本仓库默认读取 `weights/pointpillar_kitti.pth`。
+
+可以直接运行:
+
+```bash
+bash scripts/download_lidar_detector_checkpoint.sh
+```
+
+### 改端口/GPU/路线
+
+```bash
+export GPU_ID=0
+export CARLA_PORT=45700
+export TM_PORT=64700
+export BASE_ROUTES=/path/to/routes.xml
+bash scripts/run_cvci_closed_loop.sh
+```
+
+### 默认开启的能力
+
+默认会开启我们当前的规则系统、LiDAR 辅助、检测头辅助和 reverse vehicle 规则。检测头是强依赖，缺 OpenPCDet、缺 yaml 或缺 `pointpillar_kitti.pth` 都会直接退出，不会静默降级。模型权重路径、检测头权重路径、CVCI 路径、CARLA 路径、端口、GPU 都不写死，均可用环境变量覆盖。
+
 
 ## What Is Included
 
@@ -32,6 +108,11 @@ Place the model separately at:
 ```bash
 weights/iter_25000.pth
 ```
+
+Model checkpoint download:
+
+- Baidu Netdisk: https://pan.baidu.com/s/1PBYbQAnsth5cPI6PMR4ESw?pwd=mee9
+- Extraction code: `mee9`
 
 or pass it explicitly:
 
@@ -186,68 +267,6 @@ Queue outputs are written to:
 ```text
 outputs/cvci_parallel_80/
 ```
-
-## Chinese Usage Notes
-
-### 目录用途
-
-- `team_code/`: 官方评测会加载的 agent 和我们新增的 CVCI 规则/辅助感知代码。
-- `team_code/auxiliary_perception/`: LiDAR 点云几何、必需检测头、目标跟踪。
-- `third_party/OpenPCDet/`: 已放入仓库的检测头源码，不含检测头权重。
-- `tools/`: 路线拆分、队列运行、分数统计、场景分析工具。
-- `scripts/`: 推荐使用的运行入口，所有路径都可以通过环境变量覆盖。
-- `weights/`: 模型占位目录，只放你自己通过其他方式上传的权重，不提交到 git。
-- `outputs/`: 运行输出目录，不提交到 git。
-
-### 单次闭环运行
-
-```bash
-cd CVCI_TJU
-export CVCI_ROOT=/你的/CVCI_Benchmark/CVCI_BenchMark
-export CARLA_ROOT=/你的/carla
-export CKPT_PATH=/你的/iter_25000.pth
-export CVCI_LIDAR_DETECTOR_MODEL=/你的/pointpillar_kitti.pth
-export PYTHON_BIN=/你的/python
-bash scripts/run_cvci_closed_loop.sh
-```
-
-如果权重放在仓库默认位置，可以不设置 `CKPT_PATH`:
-
-```bash
-weights/iter_25000.pth
-```
-
-检测头权重默认位置:
-
-```bash
-weights/pointpillar_kitti.pth
-```
-
-检测头权重下载地址:
-
-- OpenPCDet 官方 KITTI PointPillar Model Zoo: https://github.com/open-mmlab/OpenPCDet#kitti-3d-object-detection-baselines
-- 官方 PointPillar 权重: https://drive.google.com/file/d/1wMxWTpU1qUoY3DsCH31WJmvJxcjFXKlm/view?usp=sharing
-- 官方文件名是 `pointpillar_7728.pth`，本仓库默认读取 `weights/pointpillar_kitti.pth`。
-
-可以直接运行:
-
-```bash
-bash scripts/download_lidar_detector_checkpoint.sh
-```
-
-### 改端口/GPU/路线
-
-```bash
-export GPU_ID=0
-export CARLA_PORT=45700
-export TM_PORT=64700
-export BASE_ROUTES=/path/to/routes.xml
-bash scripts/run_cvci_closed_loop.sh
-```
-
-### 默认开启的能力
-
-默认会开启我们当前的规则系统、LiDAR 辅助、检测头辅助和 reverse vehicle 规则。检测头是强依赖，缺 OpenPCDet、缺 yaml 或缺 `pointpillar_kitti.pth` 都会直接退出，不会静默降级。模型权重路径、检测头权重路径、CVCI 路径、CARLA 路径、端口、GPU 都不写死，均可用环境变量覆盖。
 
 ## Citation
 
